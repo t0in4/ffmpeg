@@ -5,3 +5,7 @@
 
 # using ffmpeg to cut part of streaming video 
 ### $ffmpeg $(python3 $(which youtube-dl) -g 'https://www./watch?v=' | sed "s/.*/-ss 02:38:22 -i &/") -t 06:28 -c copy out.mkv
+
+# using ffmpeg to convert webm to mp4
+### $ffmpeg -fflags +genpts -i 1.webm -r 24 1.mp4
+
