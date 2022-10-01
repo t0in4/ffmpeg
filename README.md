@@ -12,3 +12,7 @@
 # using ffmpeg to add album cover to mp3
 ### $ffmpeg -i in.mp3 -i album_cover.png -map 0:0 -map 1:0 -c copy -id3v2_version 3 -metadata:s:v title="Album cover" -metadata:s:v comment="Cover (front)" out.mp3
 
+# using ffmpeg to convert from webm to mp3
+### $ffmpeg -i input.webm -vn -ab 128k -ar 44100 -y output.mp3
+
+
