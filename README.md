@@ -15,4 +15,9 @@
 # using ffmpeg to convert from webm to mp3
 ### $ffmpeg -i input.webm -vn -ab 128k -ar 44100 -y output.mp3
 
+# using ffmpeg to concat files
+### $ for i in *.mp4; do ffmpeg -i "$i" -acodec copy -vcodec copy -vbsf h264_mp4toannexb -f mpegts "converted${i}.ts"; done
+### $ ffmpeg -i "concat:vid1.ts|vid2.ts" -vcodec copy -acodec copy out.mp4
+
+
 
