@@ -19,5 +19,8 @@
 ### $ for i in *.mp4; do ffmpeg -i "$i" -acodec copy -vcodec copy -vbsf h264_mp4toannexb -f mpegts "converted${i}.ts"; done
 ### $ ffmpeg -i "concat:vid1.ts|vid2.ts" -vcodec copy -acodec copy out.mp4
 
+# converting mkv to mp4
+### $ for f in *.mkv; do ffmpeg -i "$f" -c copy "${f%.mkv}.mp4"; done
+
 
 
