@@ -22,5 +22,7 @@
 # converting mkv to mp4
 ### $ for f in *.mkv; do ffmpeg -i "$f" -c copy "${f%.mkv}.mp4"; done
 
+# convert mp4 to mp3
+### $ ffmpeg -i out.mp4 -b:a 64K out.mp3
 
 
