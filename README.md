@@ -28,3 +28,6 @@
 # convert mkv to mp3
 ####  it's best to use -q:a 0 for variable bit rate and it's good practice to specify -map a to exclude video/subtitles and only grab audio:
 ### $ ffmpeg -i sample.avi -q:a 0 -map a sample.mp3
+
+# reduce size
+### $ ffmpeg -i input.mp4 -vcodec libx265 -crf 28 output.mp4
