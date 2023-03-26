@@ -31,3 +31,6 @@
 
 # reduce size
 ### $ ffmpeg -i input.mp4 -vcodec libx265 -crf 28 output.mp4
+
+# convert mjpeg to mp4 (type of video is mjpeg, .avi is just container)
+### $ .\ffmpeg.exe -i input.avi -pix_fmt yuv420p -b:v 4000k -c:v libx264 output.mp4
