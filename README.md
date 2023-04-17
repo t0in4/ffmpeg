@@ -33,4 +33,8 @@
 ### $ ffmpeg -i input.mp4 -vcodec libx265 -crf 28 output.mp4
 
 # convert mjpeg to mp4 (type of video is mjpeg, .avi is just container)
-### $ .\ffmpeg.exe -i input.avi -pix_fmt yuv420p -b:v 4000k -c:v libx264 output.mp4
+### $ .\ffmpeg.exe -i input.avi -pix_fmt yuv420p -b:v 4000k -c:v libx264 output.mp4  
+
+# error - ffmpeg height not divisible by 2 (656x465) or Could not find tag for codec vp8 in stream #0, codec not currently supported in container  
+# or height not divisible by 2 (656x465)
+### $ ffmpeg -i screenrecord.webm -vcodec libx264 -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -r 24 -y -an video.mp4
