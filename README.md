@@ -38,3 +38,6 @@
 # error - ffmpeg height not divisible by 2 (656x465) or Could not find tag for codec vp8 in stream #0, codec not currently supported in container  
 # or height not divisible by 2 (656x465)
 ### $ ffmpeg -i screenrecord.webm -vcodec libx264 -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -r 24 -y -an video.mp4
+
+# wav to mp3
+### ffmpeg -i input.wav -vn -ar 44100 -ac 2 -b:a 192k output.mp3
