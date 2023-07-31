@@ -41,3 +41,6 @@
 
 # wav to mp3
 ### ffmpeg -i input.wav -vn -ar 44100 -ac 2 -b:a 192k output.mp3
+
+# mp3 reduce size
+### ffmpeg -i input.mp3 -map 0:a:0 -b:a 96k output.mp3
