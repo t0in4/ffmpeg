@@ -1,4 +1,4 @@
-# ffmpeg
+# ffmpeg 📼
 # using ffmpeg to bulk convert mp4 files to divx directly from command line
 
 ### $ for file in *.mp4 ; do ffmpeg -i "$file" -c:v mpeg4 -q:v 5 -tag:v DIVX -s 640x480 -c:a libmp3lame -q:a 5 -ac 2 -ar 44100 "converted${file}.avi" ; done
@@ -45,5 +45,5 @@
 # mp3 reduce size
 ### ffmpeg -i input.mp3 -map 0: a :0 -b:a 96k output.mp3
 
-# :c:hange video resolution for instagram
+# change video resolution for instagram  
 ### ffmpeg -y -i output_srt.mp4 -vf "[in]scale=iw*min(1080/iw\,1350/ih):ih*min(1080/iw\,1350/ih)[scaled]; [scaled]pad=1080:1350:(1080-iw*min(1080/iw\,1350/ih))/2:(1350-ih*min(1080/iw\,1350/ih))/2[padded]; [padded]setsar=1:1[out]" -c:v libx264 -c:a copy insta_output.mp4
