@@ -45,5 +45,5 @@
 # mp3 reduce size
 ### ffmpeg -i input.mp3 -map 0: a :0 -b:a 96k output.mp3
 
-# change video size for instagram
+# change video :resolution: for instagram
 ### ffmpeg -y -i output_srt.mp4 -vf "[in]scale=iw*min(1080/iw\,1350/ih):ih*min(1080/iw\,1350/ih)[scaled]; [scaled]pad=1080:1350:(1080-iw*min(1080/iw\,1350/ih))/2:(1350-ih*min(1080/iw\,1350/ih))/2[padded]; [padded]setsar=1:1[out]" -c:v libx264 -c:a copy insta_output.mp4
