@@ -7,7 +7,7 @@
 ### not working anymore 
 $ ffmpeg $(python3 $(which youtube-dl) -g 'https://www./watch?v=' | sed "s/.*/-ss 02:38:22 -i &/") -t 06:28 -c copy out.mkv
 ### use yt-dlp to download file
-### $ ffmpeg -i <file> -ss 00:31:38 -t 03:00 -c copy out.mp4
+### $ ffmpeg -i file_name -ss 00:31:38 -t 03:00 -c copy out.mp4
 ###                     OR            -to 00:34:38 -c copy out.mp4
 
 # using ffmpeg to convert webm to mp4
