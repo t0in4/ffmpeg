@@ -51,3 +51,7 @@ $ ffmpeg $(python3 $(which youtube-dl) -g 'https://www./watch?v=' | sed "s/.*/-s
 
 # change video resolution for instagram  
 ### ffmpeg -y -i output_srt.mp4 -vf "[in]scale=iw*min(1080/iw\,1350/ih):ih*min(1080/iw\,1350/ih)[scaled]; [scaled]pad=1080:1350:(1080-iw*min(1080/iw\,1350/ih))/2:(1350-ih*min(1080/iw\,1350/ih))/2[padded]; [padded]setsar=1:1[out]" -c:v libx264 -c:a copy insta_output.mp4
+
+# convert from mov to mp4
+### ffmpeg -i file.mov -vcodec h264 -acodec aac output.mp4
+
