@@ -1,4 +1,10 @@
 # ffmpeg 📼
+
+# Error when converting from AVI to MP4 (video from security cameras)
+# Could not find tag for codec pcm_alaw in stream #1, codec not currently supported in container
+# Could not write header for output file #0 (incorrect codec parameters ?): Invalid argument
+### ffmpeg -i input.avi -s 1980x1080 -c:a aac -b:a 128k OUTPUT.mp4
+
 # using ffmpeg to bulk convert mp4 files to divx directly from command line
 
 ### $ for file in *.mp4 ; do ffmpeg -i "$file" -c:v mpeg4 -q:v 5 -tag:v DIVX -s 640x480 -c:a libmp3lame -q:a 5 -ac 2 -ar 44100 "converted${file}.avi" ; done
