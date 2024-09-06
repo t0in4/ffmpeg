@@ -3,6 +3,9 @@
 # Identify the file’s codec and resolution:
 ### ffmpeg -i input -vcodec null -hide_banner
 
+# Transcode the video stream from VP8/VP9(.webm) to MJPEG:
+### ffmpeg -i input.webm -c:v mjpeg -crf 18 output.avi
+
 # Error when converting from AVI to MP4 (video from security cameras)
 ### Could not find tag for codec pcm_alaw in stream #1, codec not currently supported in container
 ### Could not write header for output file #0 (incorrect codec parameters ?): Invalid argument
