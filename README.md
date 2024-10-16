@@ -71,3 +71,6 @@ $ ffmpeg $(python3 $(which youtube-dl) -g 'https://www./watch?v=' | sed "s/.*/-s
 # convert from mov to mp4
 ### ffmpeg -i file.mov -vcodec h264 -acodec aac output.mp4
 
+# terminal transparency
+### sh -c 'xprop -f _NET_WM_WINDOW_OPACITY 32c -set _NET_WM_WINDOW_OPACITY $(printf 0x%x $((0xffffffff * 90 / 100)))'
+
