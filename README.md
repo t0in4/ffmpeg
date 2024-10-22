@@ -74,3 +74,7 @@ $ ffmpeg $(python3 $(which youtube-dl) -g 'https://www./watch?v=' | sed "s/.*/-s
 # terminal transparency
 ### sh -c 'xprop -f _NET_WM_WINDOW_OPACITY 32c -set _NET_WM_WINDOW_OPACITY $(printf 0x%x $((0xffffffff * 90 / 100)))'
 
+# convert .opus to .mp3
+### cd MusicOpusFolder/ && for file in *.opus; do ffmpeg -i "$file" -c:a libmp3lame ../MusicMp3Folder/"${file%.opus}".mp3; done
+
+
