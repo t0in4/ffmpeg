@@ -7,6 +7,10 @@
 ### 1
 ### 00:00:00,360 --> 00:00:09,130
 
+# add .srt to video file
+### $ ffmpeg -i subtitles.srt subtitles.ass // convert .srt to .ass 
+### $ ffmpeg -i file.mp4 -vf subtitles=subtitles.ass:force_style='Fontsize=34' out.mp4
+
 # Transcode the video stream from VP8/VP9(.webm) to MJPEG:
 ### ffmpeg -i input.webm -c:v mjpeg -crf 18 output.avi
 
