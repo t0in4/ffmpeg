@@ -3,6 +3,10 @@
 # Identify the file’s codec and resolution:
 ### ffmpeg -i input -vcodec null -hide_banner
 
+# how looks like .srt file
+### 1
+### 00:00:00,360 --> 00:00:09,130
+
 # Transcode the video stream from VP8/VP9(.webm) to MJPEG:
 ### ffmpeg -i input.webm -c:v mjpeg -crf 18 output.avi
 
