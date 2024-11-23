@@ -1,3 +1,10 @@
+# imageMagik
+
+# mass converting from .svg to .png and change letters from uppercase to lowercase
+###  $for file in *.svg; do convert -background transparent "$file" ./png/$(tr '[:upper:]' '[:lower:]' <<< "$file".png); done
+
+
+
 # ffmpeg 📼
 
 # Identify the file’s codec and resolution:
