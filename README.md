@@ -10,6 +10,10 @@
 
 # ffmpeg 📼
 
+# Loop stream
+### ffmpeg -stream_loop <number> -i input.mp3 -c copy output.mp3 
+### if <number> is -1 the loop in infinite and use all disk space as it can
+
 # Identify the file’s codec and resolution:
 ### ffmpeg -i input -vcodec null -hide_banner
 
