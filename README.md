@@ -10,6 +10,9 @@
 
 # ffmpeg 📼
 
+# Combining image and audio
+### ffmpeg -loop 1 -i image.jpg -i audio.mp3 -c:v libx264 -c:a aac -strict experimental -b:a 192k output.mp4
+
 # Loop stream
 ### ffmpeg -stream_loop <number> -i input.mp3 -c copy output.mp3 
 ### if <number> is -1 the loop in infinite and use all disk space as it can
