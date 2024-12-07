@@ -49,6 +49,8 @@ $ ffmpeg $(python3 $(which youtube-dl) -g 'https://www./watch?v=' | sed "s/.*/-s
 
 # using ffmpeg to convert webm to mp4
 ### $ffmpeg -fflags +genpts -i 1.webm -r 24 1.mp4
+### if error width not divisible by 2 (1231x1038)
+### $ffmpeg -fflags +genpts -i 1.webm -vf scale=600:400 -r 24 output.mp4
 
 # using ffmpeg to add album cover to mp3
 ### $ffmpeg -i in.mp3 -i album_cover.png -map 0:0 -map 1:0 -c copy -id3v2_version 3 -metadata:s:v title="Album cover" -metadata:s:v comment="Cover (front)" out.mp3
