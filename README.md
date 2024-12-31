@@ -105,4 +105,4 @@ $ ffmpeg $(python3 $(which youtube-dl) -g 'https://www./watch?v=' | sed "s/.*/-s
 ### cd MusicOpusFolder/ && for file in *.opus; do ffmpeg -i "$file" -c:a libmp3lame ../MusicMp3Folder/"${file%.opus}".mp3; done
 
 # find text in files
-### $ find . -type f -name "*.txt" -exec grep "user" {} \;
+### $ find . -type f -name "*.txt" -exec grep "user" {} \\;
