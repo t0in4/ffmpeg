@@ -104,5 +104,8 @@ $ ffmpeg $(python3 $(which youtube-dl) -g 'https://www./watch?v=' | sed "s/.*/-s
 # convert .opus to .mp3
 ### cd MusicOpusFolder/ && for file in *.opus; do ffmpeg -i "$file" -c:a libmp3lame ../MusicMp3Folder/"${file%.opus}".mp3; done
 
+# MOV to MP4
+### ffmpeg -i input.mov -c:v libx264 -b:v 2M -c:a aac -b:a 128K -movflags +faststart output.mp4
+
 # find text in files
 ### $ find . -type f -name "*.txt" -exec grep "user" {} \\;
