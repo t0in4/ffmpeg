@@ -110,7 +110,7 @@ $ ffmpeg $(python3 $(which youtube-dl) -g 'https://www./watch?v=' | sed "s/.*/-s
 # find text in files
 ### $ find . -type f -name "*.txt" -exec grep "user" {} \\;
 # crop black borders from video
-### ffplay -i YourMovie.mp4 -vf "cropdetect=24:16:0" 
+### $ ffplay -i YourMovie.mp4 -vf "cropdetect=24:16:0" 
 ###  this command will give some output - us it as parameters for next command
 ###  The cropdetect filter values are:
 ###   cropdetect=limit:round:reset
@@ -118,4 +118,4 @@ $ ffmpeg $(python3 $(which youtube-dl) -g 'https://www./watch?v=' | sed "s/.*/-s
 ###    round = output resolution must be divisible to this
 ###    reset = after how many frames the detection process will start over
 ###    If it looks OK, crop it:
-###   ffmpeg -i YourMovie.mp4 -vf "crop=640:256:0:36" YourCroppedMovie.mp4
+###   $ ffmpeg -i YourMovie.mp4 -vf "crop=640:256:0:36" YourCroppedMovie.mp4
