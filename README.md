@@ -5,6 +5,9 @@
 
 #mass converting from .webp to .jpg
 ### $mogrify -format jpg *.webp
+#bulk reduce size to 150dp
+### $for file in *.png; do ffmpeg -i \"$file\" -vf scale=150:-1 "converted${file}"; done
+
 
 
 
