@@ -80,6 +80,11 @@ $ ffmpeg $(python3 $(which youtube-dl) -g 'https://www./watch?v=' | sed "s/.*/-s
 
 # reduce size
 ### $ ffmpeg -i input.mp4 -vcodec libx265 -crf 28 output.mp4
+### if ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of default=nw=1 video.mp4
+### and output is width = 1280 height = 720
+### to reduce video with changing resolution
+### ffmpeg -i video.mp4 -c:v libx264 -pix_fmt yuv420p -vf scale=-1:360 output.mp4
+
 
 # convert mjpeg to mp4 (type of video is mjpeg, .avi is just container)
 ### $ .\ffmpeg.exe -i input.avi -pix_fmt yuv420p -b:v 4000k -c:v libx264 output.mp4  
