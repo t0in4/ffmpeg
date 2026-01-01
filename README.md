@@ -85,6 +85,17 @@ $ ffmpeg $(python3 $(which youtube-dl) -g 'https://www./watch?v=' | sed "s/.*/-s
 ### to reduce video with changing resolution
 ### ffmpeg -i video.mp4 -c:v libx264 -pix_fmt yuv420p -vf scale=-1:360 output.mp4
 
+# bulk reduce size
+### $ for file in *.mp4; do 
+### ffmpeg -probesize 100M -analyzeduration 100M -err_detect ignore_err -fflags +genpts -i "$file" -c:v libx264 -crf 23 -c:a aac -b:a 192k -ar 48000 "./video/reducedsize${file}";
+### done 
+### to avoid errors
+### [aac @ 0x560a4763e400] Sample rate index in program config element does not match the sample rate index configured by the container.
+### [aac @ 0x560a4763e400] decode_pce: Input buffer exhausted before END element found
+### Error while decoding stream #0:0: Operation not permitted
+### and 
+### 0x55708eb16000] Input buffer exhausted before END element found
+### Error while decoding stream #0:0: Invalid data found when processing input
 
 # convert mjpeg to mp4 (type of video is mjpeg, .avi is just container)
 ### $ .\ffmpeg.exe -i input.avi -pix_fmt yuv420p -b:v 4000k -c:v libx264 output.mp4  
