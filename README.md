@@ -13,6 +13,12 @@
 
 # ffmpeg 📼
 
+# Bulk convert flac to mp3  
+### for file in *.flac; do ffmpeg -i "$file" -ab 320k -map_metadata 0 -id3v2_version 3 CD_2_mp3/"${file%.flac}.mp3"; done  
+### ${variable%pattern}: Removes the shortest match of pattern from the end of the variable's value.  
+### In the loop for file in *.flac, the variable $file contains the full name (e.g., song.flac).  
+### ${file%.flac} evaluates to song, allowing you to construct song.mp3.  
+
 # Combining image and audio
 ### ffmpeg -loop 1 -i image.jpg -i audio.mp3 -c:v libx264 -c:a aac -strict experimental -b:a 192k output.mp4
 
